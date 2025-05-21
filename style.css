@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* color-scheme: light dark; */
+}
+
+:root {
+  font-family: inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: whitesmoke;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  max-width: 1800px;
+  margin: auto;
+  background-color: rgb(23, 23, 23);
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+h2 {
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* nav Bar */
+
+.brand {
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  background: black;
+  height: 10vh;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  padding-left: 0;
+  background: black;
+  padding-right: 2rem;
+}
+
+nav ul li a {
+  transition: color 0.25s ease;
+}
+
+nav ul li a:hover {
+  color: #3654ad;
+}
+
+.abs {
+  background: url(./ham.svg);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  top: 25px;
+  right: 30px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+.callout-btn {
+  background-color: royalblue;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.callout-btn:hover {
+  background-color: #3654ad;
+}
+
+/* hero section */
+
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+}
+
+.hero strong {
+  color: royalblue;
+  text-wrap: nowrap;
+}
+
+.hero p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  font: inherit;
+  background-color: royalblue;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.btn:hover {
+  background-color: #3654ad;
+}
+
+/* about section */
+
+.about {
+  text-align: center;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.about h1 {
+  margin-bottom: 3rem;
+}
+
+.about-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: auto;
+  gap: 5rem;
+}
+
+.about-body h2 {
+  margin-bottom: 1rem;
+  white-space: nowrap;
+}
+
+.about-body p {
+  text-align: left;
+}
+
+.skills ul {
+  columns: 2;
+  padding-left: 0;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+/* projects section */
+
+.projects {
+  /* background-color: red; */
+  padding-top: 100px;
+  height: 100vh;
+}
+
+.projects h1 {
+  margin-bottom: 2rem;
+}
+
+.projects-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.card {
+  width: 25%;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 1rem;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.155);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card p {
+  margin: 1rem 0;
+}
+
+/* contact section */
+
+.contact {
+  background-color: red;
+  padding-top: 100px;
+  height: 100vh;
+}
+
+/* responsive design */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    text-transform: capitalize;
+  }
+
+  nav {
+    display: block;
+    text-align: center;
+  }
+
+  .ul-ham {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .brand {
+    padding-top: 25px;
+  }
+
+  nav ul {
+    height: 0px;
+    overflow: hidden;
+  }
+
+  .abs {
+    display: block;
+  }
+  .about-body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .card {
+    width: 50%;
+    border: 2px solid red;
+  }
+}
