@@ -245,6 +245,15 @@ input:focus {
   outline: 3px solid royalblue;
 }
 
+textarea {
+  border-radius: 10px;
+  outline: none;
+}
+
+textarea:focus {
+  outline: 4px solid royalblue;
+}
+
 .footer {
   text-align: center;
   background: #00000092;
