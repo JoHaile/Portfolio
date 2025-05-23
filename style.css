@@ -77,7 +77,7 @@ nav ul li a:hover {
 }
 
 .abs {
-  background: url(./ham.svg);
+  background: url(./img/ham.svg);
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
