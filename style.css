@@ -376,7 +376,7 @@ textarea:focus {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-transform: capitalize;
     line-height: unset;
   }
@@ -420,5 +420,8 @@ textarea:focus {
   }
   .skills-img img {
     width: 190px;
+  }
+  .card {
+    width: 300px;
   }
 }
