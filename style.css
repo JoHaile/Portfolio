@@ -152,9 +152,9 @@ nav ul li a:hover {
 .about-body {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 90%;
+  /* width: 90%; */
+  gap: 1rem;
   margin: auto;
-  gap: 5rem;
 }
 
 .about-body h2 {
@@ -162,22 +162,45 @@ nav ul li a:hover {
   white-space: nowrap;
 }
 
-.about-body p {
+.bio {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.bio h2 {
   text-align: left;
 }
 
-.skills ul {
-  columns: 2;
-  padding-left: 0;
+.about-body p {
   text-align: left;
-  text-transform: capitalize;
+}
+.skills {
+  padding-left: 2rem;
+}
+
+.skills-img img {
+  width: 250px;
+  float: left;
+  margin-right: 1rem;
+  border-radius: 10px;
+}
+
+.technical-skills {
+  margin-top: 2rem;
+}
+.education {
+  margin-top: 2rem;
+  text-align: left;
+}
+.g {
+  margin-bottom: 1rem;
 }
 
 /* projects section */
 
 .projects {
   /* background-color: red; */
-  padding-top: 100px;
+  margin-top: 100px;
   min-height: 100vh;
 }
 
@@ -251,7 +274,7 @@ textarea {
 }
 
 textarea:focus {
-  outline: 4px solid royalblue;
+  outline: 3px solid royalblue;
 }
 
 .footer {
@@ -295,6 +318,7 @@ textarea:focus {
   .about-body {
     display: flex;
     flex-direction: column-reverse;
+    gap: 2rem;
   }
   .card {
     width: 50%;
