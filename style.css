@@ -27,13 +27,15 @@ body {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 5rem;
+  line-height: 100px;
   text-align: center;
   text-transform: capitalize;
 }
 
 h2 {
   text-transform: capitalize;
+  color: #3654ad;
 }
 
 a {
@@ -44,28 +46,36 @@ a {
 /* nav Bar */
 
 .brand {
+  color: #3654ad;
   font-weight: bolder;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  font-family: monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 25px;
 }
 
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  width: 85vw;
+  justify-content: space-between;
+  margin: auto;
   position: sticky;
   top: 0;
-  background: black;
-  height: 10vh;
+  background: transparent;
+  height: 15vh;
   z-index: 500;
+  backdrop-filter: blur(10px);
 }
 
 nav ul {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 3.1rem;
   list-style: none;
   padding-left: 0;
-  background: black;
+  background: transparent;
   padding-right: 2rem;
 }
 
@@ -102,7 +112,9 @@ nav ul li a:hover {
 .callout-btn:hover {
   background-color: #3654ad;
 }
-
+.callout-btn:active {
+  scale: 0.95;
+}
 /* hero section */
 
 .hero {
@@ -110,25 +122,28 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   text-transform: capitalize;
+  margin-top: 100px;
 }
 
 .hero strong {
   color: royalblue;
   text-wrap: nowrap;
+  text-transform: uppercase;
 }
 
 .hero p {
   text-align: center;
-  margin-bottom: 1rem;
+  margin: 10px 0 30px 0;
 }
 
 .btn {
   font: inherit;
   background-color: royalblue;
+  color: white;
   border: none;
-  padding: 0.5rem 1.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.5s ease;
@@ -137,11 +152,16 @@ nav ul li a:hover {
 .btn:hover {
   background-color: #3654ad;
 }
+.btn:active {
+  scale: 0.99;
+}
 
 /* about section */
 
 .about {
   text-align: center;
+  width: 90vw;
+  margin: 0 5vw;
   padding-top: 100px;
 }
 
@@ -178,6 +198,20 @@ nav ul li a:hover {
   padding-left: 2rem;
 }
 
+.skills-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+.skills-img p {
+  font-size: 22px;
+}
+.skills-img strong {
+  color: #3654ad;
+  margin-right: 15px;
+}
 .skills-img img {
   width: 250px;
   float: left;
@@ -218,7 +252,7 @@ nav ul li a:hover {
 }
 
 .card:hover {
-  transform: rotate(-5deg) scale(1.1);
+  transform: rotate(0deg) scale(1.08);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -231,12 +265,13 @@ nav ul li a:hover {
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: transparent;
   opacity: 0;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .card:hover .card__content {
+  backdrop-filter: blur(5px);
   transform: translate(-50%, -50%) rotate(0deg);
   opacity: 1;
 }
@@ -244,14 +279,14 @@ nav ul li a:hover {
 .card__title {
   margin: 0;
   font-size: 24px;
-  color: #333;
+  color: white;
   font-weight: 700;
 }
 
 .card__description {
   margin: 10px 0 0;
   font-size: 14px;
-  color: #777;
+  color: white;
   line-height: 1.4;
 }
 
@@ -333,7 +368,7 @@ textarea:focus {
 
 .footer {
   text-align: center;
-  background: #00000092;
+  /* background: #00000092; */
   color: rgba(245, 245, 245, 0.648);
 }
 
@@ -341,13 +376,17 @@ textarea:focus {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-transform: capitalize;
+    line-height: unset;
   }
 
   nav {
     display: block;
     text-align: center;
+    width: 100%;
+    height: 12vh;
+    background-color: black;
   }
 
   .ul-ham {
@@ -359,9 +398,11 @@ textarea:focus {
 
   .brand {
     padding-top: 25px;
+    color: #3654ad;
   }
 
   nav ul {
+    background-color: black;
     height: 0px;
     overflow: hidden;
   }
@@ -372,9 +413,15 @@ textarea:focus {
   .about-body {
     display: flex;
     flex-direction: column-reverse;
-    gap: 2rem;
+    gap: 4 rem;
+  }
+  .skills-img {
+    gap: 50px;
   }
   .skills-img img {
     width: 190px;
+  }
+  .card {
+    width: 300px;
   }
 }
