@@ -27,7 +27,7 @@ body {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 4.5rem;
   line-height: 100px;
   text-align: center;
   text-transform: capitalize;
@@ -58,15 +58,13 @@ a {
 nav {
   display: flex;
   align-items: center;
-  width: 85vw;
   justify-content: space-between;
-  margin: auto;
+  padding-left: 5rem;
   position: sticky;
   top: 0;
-  background: transparent;
-  height: 15vh;
+  background: black;
+  height: 90px;
   z-index: 500;
-  backdrop-filter: blur(10px);
 }
 
 nav ul {
@@ -75,7 +73,7 @@ nav ul {
   gap: 3.1rem;
   list-style: none;
   padding-left: 0;
-  background: transparent;
+  background: black;
   padding-right: 2rem;
 }
 
@@ -118,13 +116,21 @@ nav ul li a:hover {
 /* hero section */
 
 .hero {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: top;
   text-transform: capitalize;
-  margin-top: 100px;
+  padding-top: 100px;
+  background: #000000;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 24%,
+    rgba(0, 0, 107, 1) 100%
+  );
+  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 5%;
 }
 
 .hero strong {
@@ -265,7 +271,8 @@ nav ul li a:hover {
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
-  background-color: transparent;
+  background-color: #0000007f;
+  background: linear-gradient(180deg, #00000094 24%, #00006b91 100%);
   opacity: 0;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -327,11 +334,11 @@ nav ul li a:hover {
 
 .contact {
   padding-top: 100px;
-  height: 100vh;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .contact h1 {
@@ -360,6 +367,8 @@ input:focus {
 textarea {
   border-radius: 10px;
   outline: none;
+  font: inherit;
+  padding: 1rem;
 }
 
 textarea:focus {
