@@ -24,5 +24,5 @@ To run the project locally, follow these steps:
 ## 📞 Contact Information
 Let's connect!
 
--**Email**: yohannes.h93@gmail.com
--**GitHub**: github.com/johaile/
+- **Email**: yohannes.h93@gmail.com
+- **GitHub**: github.com/johaile/
