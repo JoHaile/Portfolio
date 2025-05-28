@@ -507,6 +507,9 @@ textarea:focus {
 /* responsive design */
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 0 1rem;
+  }
   h1 {
     font-size: 2.5rem;
     text-transform: capitalize;
@@ -518,6 +521,7 @@ textarea:focus {
     text-align: center;
     width: 100%;
     height: 12vh;
+    padding-left: 0;
     background-color: black;
   }
 
@@ -554,6 +558,10 @@ textarea:focus {
     width: 190px;
   }
   .card {
-    width: 300px;
+    width: 350px;
+  }
+  .wrapper .icon {
+    width: 80px;
+    height: 80px;
   }
 }
