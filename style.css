@@ -227,6 +227,13 @@ nav ul li a:hover {
 
 .technical-skills {
   margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.icons-header {
+  margin-top: 3rem;
 }
 .education {
   margin-top: 2rem;
@@ -300,6 +307,122 @@ nav ul li a:hover {
 .card:hover svg {
   scale: 0;
   transform: rotate(-45deg);
+}
+
+/* for the icons */
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 120px;
+  padding-top: 40px;
+  font-family: "inter", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #333;
+  border-radius: 50%;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.icon img {
+  width: 60%;
+}
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  text-wrap: nowrap;
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .html:hover,
+.wrapper .html:hover .tooltip,
+.wrapper .html:hover .tooltip::before {
+  background: #e44d26;
+  color: #fff;
+}
+
+.wrapper .css:hover,
+.wrapper .css:hover .tooltip,
+.wrapper .css:hover .tooltip::before {
+  background: #264de4;
+  color: #fff;
+}
+
+.wrapper .java-script:hover,
+.wrapper .java-script:hover .tooltip,
+.wrapper .java-script:hover .tooltip::before {
+  background: #f7df1e;
+  color: black;
+}
+
+.wrapper .react:hover {
+  background-color: black;
+}
+.wrapper .react:hover .tooltip,
+.wrapper .react:hover .tooltip::before {
+  background: #00d8ff;
+  color: white;
+}
+
+.wrapper .type:hover,
+.wrapper .type:hover .tooltip,
+.wrapper .type:hover .tooltip::before {
+  background: #007acc;
+  color: white;
+}
+
+.wrapper .java:hover {
+  background: black;
+}
+.wrapper .java:hover .tooltip,
+.wrapper .java:hover .tooltip::before {
+  background-color: #e44d26;
+  color: white;
 }
 
 /* projects section */
